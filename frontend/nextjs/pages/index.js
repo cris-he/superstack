@@ -3,7 +3,7 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
 import 'isomorphic-unfetch'
-import clientCredentials from '../config/firebase/client'
+import clientCredentials from '../config/firebase/client.json'
 
 export default class Index extends Component {
   static async getInitialProps({ req, query }) {
