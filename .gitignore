@@ -2,7 +2,7 @@
 
 # Firebase Auth Creds
 /frontend/nextjs/config/firebase/
-/frontend/nextjs/sessions/
+/frontend/nextjs/sessions/*.json
 
 # Logs
 logs
