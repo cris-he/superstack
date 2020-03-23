@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/firestore'
-import 'isomorphic-unfetch'
-import clientCredentials from '../config/firebase/client.json'
+import React, { Component } from 'react';
+import Link from 'next/link';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
+import 'isomorphic-unfetch';
+import clientCredentials from '../config/firebase/client.json';
 
 export default class Index extends Component {
   static async getInitialProps({ req, query }) {
@@ -138,6 +139,10 @@ export default class Index extends Component {
             </ul>
           </div>
         )}
+
+        <Link href="/about">
+          <a>Dashboard</a>
+        </Link>
       </div>
     )
   }
