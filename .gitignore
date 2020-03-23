@@ -1,5 +1,8 @@
 .DS_STORE
 
+# Firebase Auth Creds
+/frontend/nextjs/config/firebase/
+
 # Logs
 logs
 *.log
