@@ -1,0 +1,5 @@
+
+# Firebase Auth Creds
+/configs/firebase/
+
+/sessions/*.json
