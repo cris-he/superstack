@@ -3,6 +3,9 @@ import firebase from '../firebase/app'
 
 export const UserContext = createContext()
 
+import PublicLayout from '../components/Layout/Public';
+import PrivateLayout from '../components/Layout/Private';
+
 export default ({ children }) => {
   const [user, setUser] = useState(null)
   const [loadingUser, setLoadingUser] = useState(true) // Helpful, to update the UI accordingly.
@@ -31,7 +34,17 @@ export default ({ children }) => {
 
   return (
     <UserContext.Provider value={{ user, setUser, loadingUser }}>
-      {children}
+      {
+        user ? (
+          <PrivateLayout>
+            {children}
+          </PrivateLayout>
+        ) : (
+            <PublicLayout>
+              {children}
+            </PublicLayout>
+          )
+      }
     </UserContext.Provider>
   )
 }
